@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Роберт Паттинсон — менің сүйікті актерім</title>
+<meta name="description" content="Маған ұнайтын адам — Роберт Паттинсон. Эссе негізіндегі 12 слайдтан тұратын интерактивті сайт.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='46' font-family='serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23fff'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#stage">Мазмұнға өту</a>
+
+<!-- ───────────── Прелоадер + кіру экраны ───────────── -->
+<div class="loader" id="loader">
+  <div class="loader__word word" id="loaderWord" aria-hidden="true">ROBERT</div>
+  <div class="loader__gate" id="gate" hidden>
+    <p class="mono">Best experienced with sound</p>
+    <div class="loader__btns">
+      <button class="pill pill--solid" type="button" id="enterSound">With sound ↗</button>
+      <button class="pill" type="button" id="enterMute">Without sound</button>
+    </div>
+  </div>
+  <div class="loader__meta mono" aria-hidden="true">
+    <span>Loading</span>
+    <span class="loader__count"><b id="loaderCount">000</b>%</span>
+  </div>
+  <i class="loader__bar" id="loaderBar" aria-hidden="true"></i>
+</div>
+
+<h1 class="sr-only">Роберт Паттинсон — менің сүйікті актерім. Эссе, 12 слайд.</h1>
+
+<!-- ───────────── Мазмұны (слайд-сорттер) ───────────── -->
+<div class="index" id="index" role="dialog" aria-modal="true" aria-label="Мазмұны" hidden>
+  <div class="index__head mono">
+    <span>Мазмұны · 12 слайд</span>
+    <button class="pill" type="button" id="indexClose">Close ✕</button>
+  </div>
+  <ol class="index__list" id="indexList"></ol>
+  <details class="credits">
+    <summary class="mono">Сурет авторлары</summary>
+    <ul id="creditsList"></ul>
+  </details>
+</div>
+
+<div class="track" id="track">
+  <main class="stage" id="stage">
+
+    <!-- ═════════ 01 · ЭДИТ: Роберт Паттинсон ═════════ -->
+    <section class="scene s1" id="s1" data-theme="paper" data-title="Кіріспе" aria-label="Слайд 1: Кіріспе">
+      <video class="s1__video" id="heroVideo" muted loop playsinline preload="auto" hidden></video>
+
+      <div class="edit" id="edit" aria-hidden="true">
+
+        <!-- 1 · аты -->
+        <div class="shot shot--w sh-name" data-beats="3">
+          <div class="big sh-name__a" data-fit="96" data-e="slam">Robert</div>
+          <div class="big sh-name__b" data-fit="62" data-fit-p="92" data-e="slideR" data-d=".15">Pattinson</div>
+          <p class="mono sh-name__v" data-e="fade" data-d=".4">Actor</p>
+          <div class="ph is-cut sh-name__ph" style="--ar:.79" data-e="rise" data-d=".08"><img src="assets/photos/cut-leather.webp" alt=""></div>
+        </div>
+
+        <!-- 2 · FΛSHION (қара) -->
+        <div class="shot shot--b sh-fashion" data-beats="3">
+          <div class="big sh-fashion__a" data-fit="92" data-e="slam">FΛSHION</div>
+          <div class="ph is-cut sh-fashion__ph" style="--ar:.723" data-e="rise" data-d=".1"><img src="assets/photos/cut-rn-33.webp" alt=""></div>
+          <p class="mono sh-cap" data-e="fade" data-d=".4">Robert Pattinson</p>
+        </div>
+
+        <!-- 3–5 · логотиптер -->
+        <div class="shot shot--w sh-logo" data-beats="1"><div class="logo logo--gucci" data-e="slam"></div></div>
+        <div class="shot shot--b sh-logo" data-beats="1"><div class="logo logo--lv logo--light" data-e="slam"></div></div>
+        <div class="shot shot--w sh-logo" data-beats="1"><div class="logo logo--dior" data-e="slam"></div></div>
+
+        <!-- 6 · бөлінген фон -->
+        <div class="shot shot--split sh-split" data-beats="3">
+          <div class="big sh-split__a" data-fit="96" data-e="slam">FΛSHION</div>
+          <div class="ph is-cut sh-split__ph" style="--ar:.625" data-e="rise" data-d=".1"><img src="assets/photos/cut-rn-38.webp" alt=""></div>
+          <p class="mono sh-split__cap" data-e="fade" data-d=".3">Robert Pattinson</p>
+        </div>
+
+        <!-- 7 · камера кадры -->
+        <div class="shot shot--b sh-cam" data-beats="3">
+          <div class="big sh-cam__a" data-fit="92" data-e="slam">ACTOR</div>
+          <div class="ph is-cut sh-cam__ph" style="--ar:.771" data-e="rise" data-d=".1"><img src="assets/photos/cut-grey25.webp" alt=""></div>
+          <div class="cam" aria-hidden="true">
+            <i class="cam__c cam__c--tl"></i><i class="cam__c cam__c--tr"></i><i class="cam__c cam__c--bl"></i><i class="cam__c cam__c--br"></i>
+            <i class="cam__af"></i>
+            <p class="cam__rec mono"><i></i>REC</p>
+            <p class="cam__tc mono" data-tc>00:00:00</p>
+            <p class="cam__bat mono"><span><i></i><i></i><i></i></span></p>
+            <p class="cam__info mono">ISO 400 · 1/60 · F2.8</p>
+            <p class="cam__name mono">Robert Pattinson</p>
+          </div>
+        </div>
+
+        <!-- 8 · коллаж -->
+        <div class="shot shot--b sh-collage" data-beats="3">
+          <div class="sh-collage__grid">
+            <div class="ph"><img src="assets/photos/rp-leather.webp" alt=""></div>
+            <div class="ph"><img src="assets/photos/rp-grey.webp" alt=""></div>
+            <div class="ph"><img src="assets/photos/raw-venice.webp" alt=""></div>
+            <div class="ph"><img src="assets/photos/rn-33.webp" alt=""></div>
+          </div>
+          <div class="big sh-collage__a" data-fit="92" data-e="slam">FΛSHION</div>
+        </div>
+
+        <!-- 9 · аяқталу -->
+        <div class="shot shot--w sh-title" data-beats="6">
+          <div class="big sh-title__a" data-fit="96" data-e="slam">Robert</div>
+          <div class="ph is-cut sh-title__ph" style="--ar:.625" data-e="rise" data-d=".1"><img src="assets/photos/cut-sweater.webp" alt=""></div>
+          <div class="big sh-title__b" data-fit="96" data-e="slam" data-d=".15">Pattinson</div>
+          <p class="sh-title__sub" data-e="fade" data-d=".5">Менің сүйікті <em>актерім</em></p>
+        </div>
+
+        <!-- тұрақты REC нүктесі -->
+        <div class="rec" aria-hidden="true"><i></i><span class="mono">REC</span><span class="mono rec__tc" data-tc>00:00:00</span></div>
+      </div>
+
+      <p class="s1__kicker mono">Маған ұнайтын адам</p>
+      <p class="s1__scroll mono">Төмен жылжыт <i></i></p>
+      <div class="pausemark" id="pauseMark" hidden aria-hidden="true"><i></i><i></i></div>
+      
+    </section>
+
+    <!-- ═════════ 02 · Туған күні ═════════ -->
+    <section class="scene s2" id="s2" data-theme="ink" data-title="Туған күні" aria-label="Слайд 2: Туған күні">
+      <div class="word word--line s2__year" aria-hidden="true" data-fit="58" data-maxh="52" data-in="slam">1986</div>
+      <figure class="pic s2__london" data-in="fade" data-d="0.2"><img src="assets/photos/london.jpg" alt=""><figcaption class="mono">Лондон</figcaption></figure>
+      <div class="subject is-cut s2__subject" style="--ar:.564" data-in="subject" data-d="0.3"><img src="assets/photos/cut-venice.webp" alt=""></div>
+      <div class="s2__date" aria-hidden="true">
+        <div class="s2__unit" data-in="rise" data-d="0.1"><b data-count="13" data-pad="2">13</b><small class="mono">Күн</small></div>
+        <i class="s2__sep" aria-hidden="true"></i>
+        <div class="s2__unit" data-in="rise" data-d="0.25"><b data-count="05" data-pad="2">05</b><small class="mono">Мамыр</small></div>
+        <i class="s2__sep" aria-hidden="true"></i>
+        <div class="s2__unit" data-in="rise" data-d="0.4"><b data-count="1986" data-from="1900" data-pad="4">1986</b><small class="mono">Жыл</small></div>
+      </div>
+      <div class="copy s2__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.2">02 — Туған күні</p>
+        <p class="lead" data-split data-in="split" data-d="0.35">Ол 1986 жылы 13 мамырда Англияда, Лондон қаласында дүниеге келді.</p>
+        <p class="lead lead--b" data-split data-in="split" data-d="0.7">Ол британдық актер.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 03 · Отбасы ═════════ -->
+    <section class="scene s3" id="s3" data-theme="paper" data-title="Отбасы" aria-label="Слайд 3: Отбасы">
+      <div class="word s3__bg" aria-hidden="true" data-fit="94" data-maxh="46" data-in="slam">Отбасы</div>
+      <div class="s3__cards">
+        <article class="fcard fcard--a" data-in="drop" data-d="0.1">
+          <img class="fcard__img" data-family="father" alt="" hidden>
+          <span class="mono">01</span><div class="fcard__txt"><b>Әкесі</b></div><i aria-hidden="true">Ә</i>
+        </article>
+        <article class="fcard fcard--b" data-in="drop" data-d="0.3">
+          <img class="fcard__img" data-family="mother" alt="" hidden>
+          <span class="mono">02</span><div class="fcard__txt"><b>Анасы</b></div><i aria-hidden="true">А</i>
+        </article>
+        <article class="fcard fcard--c" data-in="drop" data-d="0.5">
+          <img class="fcard__img" data-family="sisters" alt="" hidden>
+          <span class="mono">03</span><div class="fcard__txt"><b>Әпкесі</b><small class="mono">Лиззи · Виктория</small></div><i aria-hidden="true">Ә</i>
+        </article>
+      </div>      <div class="copy s3__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">03 — Отбасы</p>
+        <p class="lead" data-split data-in="split" data-d="0.3">Оның әкесі Ричард, анасы Клэр. Оның екі әпкесі бар.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 04 · Калифорния ═════════ -->
+    <section class="scene s4" id="s4" data-theme="ink" data-title="Қазір қайда тұрады" aria-label="Слайд 4: Қазір қайда тұрады">
+      <div class="s4__ticker s4__ticker--a mono" aria-hidden="true"><span>АҚШ ★ КАЛИФОРНИЯ ★ АҚШ ★ КАЛИФОРНИЯ ★ АҚШ ★ КАЛИФОРНИЯ ★ АҚШ ★ КАЛИФОРНИЯ ★</span></div>
+      <div class="word s4__bg" aria-hidden="true" data-fit="90" data-fit-p="90" data-maxh="30" data-in="slam">Калифор<br class="mbr">ния</div>
+      <figure class="pic s4__photo" data-in="rise" data-d="0.3"><img src="assets/photos/la.jpg" alt=""></figure>
+      <div class="copy s4__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">04 — Қазір қайда тұрады</p>
+        <p class="lead" data-split data-in="split" data-d="0.3">Қазір ол АҚШ-та, Калифорния штатында тұрады.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 06 · Ауа райы ═════════ -->
+    <section class="scene s6" id="s6" data-theme="split" data-title="Ауа райы" aria-label="Слайд 5: Ауа райы">
+      <div class="s6__half s6__half--sun" data-in="panelL">
+        <img class="s6__img" src="assets/photos/sun.jpg" alt="">
+        <p class="kicker mono">05 — Ауа райы</p>
+        <p class="word s6__w" aria-hidden="true">Жылы</p>
+        <p class="lead" data-split data-in="split" data-d="0.45">Лос-Анджелесте ауа райы көбінесе жылы және күн ашық болады.</p>
+      </div>
+      <div class="s6__half s6__half--rain" data-in="panelR">
+        <img class="s6__img" src="assets/photos/rain.jpg" alt="">
+        <div class="s6__rain" aria-hidden="true"></div>
+        <p class="kicker mono">Қыста</p>
+        <p class="word s6__w" aria-hidden="true">Жаңбыр</p>
+        <p class="lead" data-split data-in="split" data-d="0.6">Қыста жаңбыр жауады.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 07 · Келбеті ═════════ -->
+    <section class="scene s7" id="s7" data-theme="ink" data-title="Келбеті" aria-label="Слайд 6: Келбеті">
+      <div class="subject is-cut s7__subject" style="--ar:.77" data-in="subject"><img src="assets/photos/cut-rp-grey.webp" alt=""></div>
+      <div class="spec spec--a" data-in="slideL" data-d="0.3"><span class="mono">Бойы</span><b>Ұзын</b></div>
+      <div class="spec spec--b" data-in="slideR" data-d="0.45"><span class="mono">Шашы</span><b>Қоңыр</b></div>
+      <div class="spec spec--c" data-in="slideR" data-d="0.6"><span class="mono">Көзі</span><b>Көк</b></div>
+      <div class="copy s7__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">06 — Келбеті</p>
+        <p class="lead" data-split data-in="split" data-d="0.25">Роберт ұзын бойлы. Оның шашы қоңыр, көзі көк.</p>
+        <p class="lead lead--b" data-split data-in="split" data-d="0.65">Ол әдемі және сымбатты.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 08 · Күнделікті киім ═════════ -->
+    <section class="scene s8" id="s8" data-theme="paper" data-title="Күнделікті киімі" aria-label="Слайд 7: Күнделікті киімі">
+      <div class="word s8__bg" aria-hidden="true" data-fit="76" data-maxh="40" data-in="slam">Киім</div>
+      <ul class="s8__grid">
+        <li class="look" data-in="drop" data-d="0.1"><img class="look__img" src="assets/photos/cut-jeans2.webp" alt=""><span class="mono">01</span><b>Джинсы</b></li>
+        <li class="look" data-in="drop" data-d="0.25"><img class="look__img" src="assets/photos/cut-tee.webp" alt=""><span class="mono">02</span><b>Футболка</b></li>
+        <li class="look" data-in="drop" data-d="0.4"><img class="look__img" src="assets/photos/cut-jacket.webp" alt=""><span class="mono">03</span><b>Күртеше</b></li>
+        <li class="look" data-in="drop" data-d="0.55"><img class="look__img look__img--wide" src="assets/photos/cut-sneakers9.webp" alt=""><span class="mono">04</span><b>Кроссовка</b></li>
+      </ul>      <div class="copy s8__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">07 — Күнделікті киімі</p>
+        <p class="lead" data-split data-in="split" data-d="0.25">Ол күнделікті киім киеді. Ол джинсы, футболка, күртеше және кроссовка киеді.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 09 · Кешкі киім ═════════ -->
+    <section class="scene s9" id="s9" data-theme="ink" data-title="Кешкі киімі" aria-label="Слайд 8: Кешкі киімі">
+      <i class="s9__beam s9__beam--l" aria-hidden="true"></i>
+      <i class="s9__beam s9__beam--r" aria-hidden="true"></i>
+      <div class="word word--line s9__bg" aria-hidden="true" data-fit="84" data-maxh="44" data-in="slam">Кешкі</div>
+      <div class="subject is-cut s9__subject" style="--ar:.303" data-in="subject"><img src="assets/photos/cut-fullbody.webp" alt=""></div>
+      <div class="copy s9__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">08 — Кешкі киімі</p>
+        <p class="lead" data-split data-in="split" data-d="0.3">Кештерде ол әдемі костюм киеді.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 10 · Мамандығы ═════════ -->
+    <section class="scene s10" id="s10" data-theme="paper" data-title="Мамандығы" aria-label="Слайд 9: Мамандығы">
+      <div class="word s10__bg" aria-hidden="true" data-fit="80" data-maxh="40" data-in="slam">Актер</div>
+      <div class="s10__strip">
+        <article class="frame" data-in="drop" data-d="0.15"><img src="assets/photos/rn-33.webp" alt=""><span class="mono">01</span><b>Гарри Поттер</b></article>
+        <article class="frame" data-in="drop" data-d="0.35"><img src="assets/photos/rn-34.webp" alt=""><span class="mono">02</span><b>Сумерки</b></article>
+        <article class="frame" data-in="drop" data-d="0.55"><img src="assets/photos/rp-leather.webp" alt=""><span class="mono">03</span><b>Бэтмен</b></article>
+      </div>
+      <div class="copy s10__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">09 — Мамандығы</p>
+        <p class="lead" data-split data-in="split" data-d="0.25">Ол актер болып жұмыс істейді. Ол «Гарри Поттер», «Сумерки» және «Бэтмен» фильмдерінде ойнады.</p>
+        <p class="lead lead--b" data-split data-in="split" data-d="0.7">Оның жұмысы қызықты.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 11 · Күн тәртібі ═════════ -->
+    <section class="scene s11" id="s11" data-theme="ink" data-title="Күн тәртібі" aria-label="Слайд 10: Күн тәртібі">
+      <div class="word s11__bg" aria-hidden="true" data-fit="38" data-maxh="46" data-in="slam">Күн</div>
+      <div class="s11__day" aria-hidden="true"><i class="s11__dot"></i></div>
+      <div class="s11__cols">
+        <article class="phase phase--1" data-in="rise" data-d="0.1">
+          <img class="phase__img" src="assets/photos/sunrise.jpg" alt="">
+          <span class="mono">Таңертең</span>
+          <ol><li>тұрады</li><li>таңғы ас ішеді</li><li>жұмысқа барады</li></ol>
+        </article>
+        <article class="phase phase--2" data-in="rise" data-d="0.3">
+          <img class="phase__img" src="assets/photos/camera.jpg" alt="">
+          <span class="mono">Күндіз</span>
+          <ol><li>фильмге түседі</li></ol>
+        </article>
+        <article class="phase phase--3" data-in="rise" data-d="0.5">
+          <img class="phase__img" src="assets/photos/dinner.jpg?v=2" alt="">
+          <span class="mono">Кешке</span>
+          <ol><li>демалады</li><li>отбасымен уақыт өткізеді</li></ol>
+        </article>
+      </div>
+      <div class="copy s11__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.05">10 — Күн тәртібі</p>
+        <p class="lead" data-split data-in="split" data-d="0.15">Оның күн тәртібі әртүрлі.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 12 · Неге ұнайды ═════════ -->
+    <section class="scene s12" id="s12" data-theme="paper" data-title="Неге ұнайды" aria-label="Слайд 11: Неге ұнайды">
+      <div class="subject is-cut s12__subject" style="--ar:.79" data-in="subject"><img src="assets/photos/cut-leather.webp" alt=""></div>
+      <div class="s12__stars" aria-hidden="true" data-in="stars">
+        <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+      </div>
+      <div class="copy s12__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.05">11 — Неге ұнайды</p>
+        <p class="statement" data-split data-in="split" data-d="0.15">Маған Роберт Паттинсон ұнайды, өйткені ол жақсы актер.</p>
+        <p class="lead lead--b s12__lead" data-split data-in="split" data-d="0.6">Мен оның фильмдерін көргенді жақсы көремін.</p>
+      </div>
+    </section>
+
+    <!-- ═════════ 13 · Қорытынды ═════════ -->
+    <section class="scene s13" id="s13" data-theme="ink" data-title="Рақмет" aria-label="Слайд 12: Рақмет">
+      <div class="word word--line s13__bg" aria-hidden="true" data-fit="92" data-fit-p="88" data-maxh="40" data-in="slam">Рақ<br class="mbr">мет</div>
+      <div class="subject is-cut s13__subject" style="--ar:.625" data-in="subject"><img src="assets/photos/cut-sweater.webp" alt=""></div>
+      <button class="s13__bark" type="button" id="bark" aria-label="Нажми на меня" data-in="fade" data-d="0.9">Нажми на меня</button>
+      <div class="copy s13__copy">
+        <p class="kicker mono" data-in="fade" data-d="0.1">12 — Қорытынды</p>
+        <p class="statement" data-split data-in="split" data-d="0.25">Назарларыңызға рақмет!</p>
+        <p class="s13__made mono" data-in="fade" data-d="0.7">Арнур жасады</p>
+        <button class="pill pill--solid s13__again" type="button" id="again" data-in="fade" data-d="0.85">↺ Replay</button>
+      </div>
+    </section>
+    <!-- ═════════ HUD ═════════ -->
+    <header class="hud hud--top">
+      <div class="hud__id"><a class="hud__brand" href="#s1" data-goto="0" aria-label="Басына өту"><span>R</span><i></i><span>P</span></a><span class="hud__made mono">Made by Arnur</span></div>
+      <div class="hud__rec mono" aria-hidden="true"><i></i>REC <b id="tc">00:00:00</b></div>
+      <div class="hud__btns">
+        <div class="vol" id="vol">
+          <button class="pill pill--dark" type="button" id="soundBtn" aria-pressed="false" aria-expanded="false" aria-controls="volPanel"><span>Sound</span></button>
+          <div class="vol__panel" id="volPanel" hidden><input id="volRange" type="range" min="0" max="100" value="15" aria-label="Volume"><output id="volOut" class="mono">15</output></div>
+        </div>
+        <button class="pill pill--solid" type="button" id="indexBtn" aria-haspopup="dialog">Menu</button>
+      </div>    </header>
+    <footer class="hud hud--bottom">
+      <div class="counter" aria-hidden="true"><b id="cur">01</b><small>/12</small></div>
+      <div class="slidename mono" id="slideName" aria-hidden="true">Кіріспе</div>
+      <div class="ticks" id="ticks" role="group" aria-label="Слайдтар"></div>
+      <div class="hint mono" aria-hidden="true"><span>↑</span><span>↓</span> слайд</div>
+    </footer>
+    <i class="vf vf--tl" aria-hidden="true"></i><i class="vf vf--tr" aria-hidden="true"></i><i class="vf vf--bl" aria-hidden="true"></i><i class="vf vf--br" aria-hidden="true"></i>
+
+    <div class="fx fx-grain" aria-hidden="true"></div>
+    <p class="sr-only" id="live" aria-live="polite"></p>
+  </main>
+</div>
+
+<!-- ───────────── SVG символдар ───────────── -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1.6 15.2 8.2 22.4 9.2 17.2 14.3 18.5 21.5 12 18.1 5.5 21.5 6.8 14.3 1.6 9.2 8.8 8.2Z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="assets/manifest.js"></script>
+<script src="assets/credits.js"></script>
+<script src="assets/music-data.js"></script>
+<script src="assets/bark-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
